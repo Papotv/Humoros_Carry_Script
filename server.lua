@@ -1,0 +1,10 @@
+RegisterNetEvent('cmg2\_animations\:sync')
+AddEventHandler('cmg2\_animations\:sync', function(targetPed, lib, lib2, anim1, anim2, distans, distans2, height, targetServerId, length, spin, controlFlagMe, controlFlagTarget, animFlagTarget)
+TriggerClientEvent('cmg2\_animations\:syncTarget', targetServerId, source, lib, anim2, distans, distans2, height, length, spin, controlFlagTarget)
+TriggerClientEvent('cmg2\_animations\:syncMe', source, lib, anim1, length, controlFlagMe)
+end)
+
+RegisterNetEvent('cmg2\_animations\:stop')
+AddEventHandler('cmg2\_animations\:stop', function(targetId)
+TriggerClientEvent('cmg2\_animations\:cl\_stop', targetId)
+end)
